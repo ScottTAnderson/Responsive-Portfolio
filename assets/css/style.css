@@ -76,6 +76,7 @@ h1 {
     content: '';
     display: block;
     height: 5px;
+    top: 5px;
     width: 100%;
     background-color: #777777;
     
@@ -208,6 +209,11 @@ textarea[type=text] {
 }
 
 @media (max-width:768px) {
+    .headshot {
+        width: 50%;
+        height: auto;
+    }
+
     .headercontent {
         text-align:center;
     }
@@ -224,6 +230,11 @@ textarea[type=text] {
 }
 
 @media (max-width:640px) {
+    .headshot {
+        width:100%;
+        height:auto;
+    }
+
     .headercontent {
         text-align:center;
     }
