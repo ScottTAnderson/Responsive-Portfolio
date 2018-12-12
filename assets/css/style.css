@@ -1,4 +1,4 @@
-/* clearfix and box-sizing hacks */
+/* clearfix BUT REMOVE box-sizing hacks for media quary !=important*/
 
 .clearfix::after {
     content: "";
@@ -6,19 +6,16 @@
     display: table;
 }
 
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
 /* part of having a sticky footer */
 
-html, body {
-    height:100%;
-    margin:0%;
-   
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: url("../images/spiration-light.png");  
+    margin-bottom: 60px;
 }
 
 /* header and header content styling */
@@ -95,10 +92,7 @@ h1 {
 /* white backgrounded main content area that is 960px wide */
 
 section {
-    background-image: url("../images/spiration-light.png");   
     padding-top: 20px;
-    min-height: 100%;
-
 }
 
 h2{
@@ -130,10 +124,13 @@ h2{
 /* footer definition for sticky footer */
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #666666;
     text-align: center;
     color: #cccccc;
-    height: 50px;
+    height: 60px;
     padding-top: 25px;
     padding-bottom: 0px;
     font-size: 8pt;
@@ -153,7 +150,7 @@ footer {
 .text {
     position: absolute;
     font-size: 40;
-    width: 320px;
+    width: 280px;
     color: #cccccc;
     background-color: #4aaaa5;
     text-align: center;
